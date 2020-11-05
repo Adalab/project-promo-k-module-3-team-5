@@ -2,6 +2,7 @@ import React from "react";
 import designIcon from "../images/design.svg";
 import keyboardIcon from "../images/keyboard.svg";
 import shareIcon from "../images/share.svg";
+import "../stylesheets/pages/_main.scss";
 
 class Form extends React.Component {
   render() {
