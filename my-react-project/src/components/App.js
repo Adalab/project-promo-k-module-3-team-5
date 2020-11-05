@@ -1,7 +1,5 @@
 import React from "react";
 import "../stylesheets/App.scss";
-
-import logoFooter from "../images/emyem.png";
 import designIcon from "../images/design.svg";
 import keyboardIcon from "../images/keyboard.svg";
 import shareIcon from "../images/share.svg";
@@ -11,6 +9,7 @@ import cardImg3 from "../images/pin-dark-hair.png";
 import cardImg4 from "../images/pin-lights.png";
 import cardImg5 from "../images/pin-long-hair.png";
 import Header from "./Header";
+import Footer from "./Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -362,18 +361,7 @@ class App extends React.Component {
             </section>
           </nav>
         </main>
-
-        {/* sectoin footer */}
-
-        <footer role="contentinfo" className="footer">
-          <small className="footer__small">Awesome profile-cards @2020</small>
-          <img
-            src={logoFooter}
-            alt="Logo de Adalab"
-            title="Adalab, escuela digital especializada para mujeres"
-            className="footer__logo"
-          />
-        </footer>
+        <Footer />
       </>
     );
   }
