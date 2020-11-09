@@ -25,7 +25,7 @@ class Form extends React.Component {
           <a
             className="customize-share__button js__hidden js-section js-createBtn js-cardCreated"
             title="Crear la tarjeta"
-            href=""
+            href="/"
             target="_blank"
           >
             Crear tarjeta
@@ -37,10 +37,10 @@ class Form extends React.Component {
           </p>
           <a
             className="js-twitter-url customize-share__web--hidden"
-            href=""
+            href="/"
             target="_blank"
           ></a>
-          <a className="customize-share__twitter--hidden" href="">
+          <a className="customize-share__twitter--hidden" href="/">
             Compartir en twitter
           </a>
         </section>

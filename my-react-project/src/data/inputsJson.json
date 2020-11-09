@@ -1,0 +1,44 @@
+[
+  {
+    "htmlFor": "fullName",
+    "placeholder": "Ej: Sally Jill",
+    "type": "text",
+    "id": "fullName",
+    "name": "name"
+  },
+  {
+    "htmlFor": "position",
+    "placeholder": "Ej: Front end",
+    "type": "text",
+    "id": "position",
+    "name": "job"
+  },
+  {
+    "htmlFor": "email",
+    "placeholder": "Ej: sally.hill@gmail.com",
+    "type": "email",
+    "id": "email",
+    "name": "email"
+  },
+  {
+    "htmlFor": "telephone",
+    "placeholder": "Ej: 555-555-555",
+    "type": "tel",
+    "id": "telephone",
+    "name": "phone"
+  },
+  {
+    "htmlFor": "linkedin",
+    "placeholder": "Ej: linkedin.com/in/sally-hill",
+    "type": "text",
+    "id": "linkedin",
+    "name": "linkedin"
+  },
+  {
+    "htmlFor": "github",
+    "placeholder": "Ej: @sally-hill",
+    "type": "text",
+    "id": "github",
+    "name": "github"
+  }
+]

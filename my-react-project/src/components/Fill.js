@@ -1,6 +1,21 @@
 import React from "react";
 import keyboardIcon from "../images/keyboard.svg";
+import inputsJson from "../data/inputsJson.json";
+import Input from "./Input";
 
+const renderInfo = () => {
+  return inputsJson.map((inputJson) => {
+    return (
+      <Input
+        key={inputJson.id}
+        placeholder={inputJson.placeholder}
+        type={inputJson.type}
+        name={inputJson.name}
+      />
+    );
+  });
+};
+console.log(renderInfo);
 class Fill extends React.Component {
   render() {
     return (
@@ -19,7 +34,8 @@ class Fill extends React.Component {
           action=""
           method="post"
         >
-          <label className="customize-menu__form-label" htmlFor="fullName">
+          <Input>{renderInfo()}</Input>
+          {/* <label className="customize-menu__form-label" htmlFor="fullName">
             Nombre completo
           </label>
           <input
@@ -29,7 +45,7 @@ class Fill extends React.Component {
             required
             id="fullName"
             name="name"
-          />
+          /> */}
           <p className="js__error-message-name js__hidden">Demasiado largo</p>
           <label className="customize-menu__form-label" htmlFor="position">
             Puesto
@@ -112,5 +128,5 @@ class Fill extends React.Component {
     );
   }
 }
-
+console.log("hola");
 export default Fill;
