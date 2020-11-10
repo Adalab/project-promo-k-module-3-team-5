@@ -11,10 +11,10 @@ class Input extends React.Component {
           className="customize-menu__form-label"
           htmlFor={this.props.htmlFor}
         >
-          Nombre completo
+          {this.props.labelText}
         </label>
         <input
-          className="customize-menu__form-input js-input js-input-name"
+          className={`customize-menu__form-input js-input ${this.props.className}`}
           placeholder={this.props.placeholder}
           type={this.props.type}
           required
