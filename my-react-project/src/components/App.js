@@ -4,6 +4,7 @@ import Header from "./Header";
 import Preview from "./Preview";
 import Form from "./Form";
 import Footer from "./Footer";
+import inputsJson from "../data/inputsJson.json";
 
 class App extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class App extends React.Component {
         <Header />
         <main className="gen-main">
           <Preview />
-          <Form />
+          <Form inputsJson={inputsJson} />
         </main>
         <Footer />
       </>

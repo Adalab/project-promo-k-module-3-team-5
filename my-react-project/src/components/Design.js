@@ -7,7 +7,7 @@ class Design extends React.Component {
       <section className="gen-main__customize-design">
         <div
           className="customize-design__container js-collapsable"
-          tabindex="2"
+          tabIndex="2"
         >
           <img
             className="customize-design__container-logo"
@@ -25,7 +25,7 @@ class Design extends React.Component {
           <h2 className="customize-design__colors-title">Colores</h2>
           <label
             className="customize-design__colors1 js-customize-design__colors"
-            for="colors1"
+            htmlFor="colors1"
             id="customize-design__colors1"
           >
             <input
@@ -41,7 +41,7 @@ class Design extends React.Component {
           </label>
           <label
             className="customize-design__colors2 js-customize-design__colors"
-            for="colors2"
+            htmlFor="colors2"
             id="customize-design__colors2"
           >
             <input
@@ -57,7 +57,7 @@ class Design extends React.Component {
           </label>
           <label
             className="customize-design__colors3 js-customize-design__colors"
-            for="colors3"
+            htmlFor="colors3"
             id="customize-design__colors3"
           >
             <input
