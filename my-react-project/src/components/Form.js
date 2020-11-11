@@ -5,11 +5,15 @@ import Fill from "./Fill";
 import "../stylesheets/pages/_main.scss";
 
 class Form extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <nav className="gen-main__customize">
         <Design />
-        <Fill />
+        <Fill inputsJson={this.props.inputsJson} />
 
         {/* section comparte */}
         <section className="gen-main__customize-share ">

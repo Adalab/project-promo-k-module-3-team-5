@@ -5,21 +5,22 @@ class Input extends React.Component {
     super(props);
   }
   render() {
+    console.log(this.props.inputJson);
     return (
       <>
         <label
           className="customize-menu__form-label"
-          htmlFor={this.props.htmlFor}
+          htmlFor={this.props.inputJson.htmlFor}
         >
-          {this.props.labelText}
+          {this.props.inputJson.labelText}
         </label>
         <input
-          className={`customize-menu__form-input js-input ${this.props.className}`}
-          placeholder={this.props.placeholder}
-          type={this.props.type}
+          className={`customize-menu__form-input js-input ${this.props.inputJson.className}`}
+          placeholder={this.props.inputJson.placeholder}
+          type={this.props.inputJson.type}
           required
-          id={this.props.id}
-          name={this.props.nameInfo}
+          id={this.props.inputJson.id}
+          name={this.props.inputJson.nameInfo}
         />
       </>
     );

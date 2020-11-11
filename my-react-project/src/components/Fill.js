@@ -12,18 +12,7 @@ class Fill extends React.Component {
 
   renderInfo() {
     return inputsJson.map((inputJson) => {
-      console.log(inputJson.id);
-      return (
-        <Input
-          key={inputJson.id}
-          htmlFor={inputJson.htmlFor}
-          labelText={inputJson.labelText}
-          className={inputJson.className}
-          placeholder={inputJson.placeholder}
-          type={inputJson.type}
-          name={inputJson.nameInfo}
-        />
-      );
+      return <Input key={inputJson.id} inputJson={inputJson} />;
     });
   }
 
