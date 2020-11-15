@@ -13,7 +13,10 @@ class Form extends React.Component {
     return (
       <nav className="gen-main__customize">
         <Design />
-        <Fill inputsJson={this.props.inputsJson} />
+        <Fill
+          inputsJson={this.props.inputsJson}
+          handleChangeInput={this.props.handleChangeInput}
+        />
         <Share />
       </nav>
     );

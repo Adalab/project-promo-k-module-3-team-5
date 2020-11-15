@@ -9,6 +9,11 @@ import inputsJson from "../data/inputsJson.json";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.handleChangeInput = this.handleChangeInput.bind(this);
+  }
+
+  handleChangeInput(inputId, inputValue) {
+    console.log("app", inputId, inputValue);
   }
 
   render() {
@@ -17,7 +22,10 @@ class App extends React.Component {
         <Header />
         <main className="gen-main">
           <Preview />
-          <Form inputsJson={inputsJson} />
+          <Form
+            inputsJson={inputsJson}
+            handleChangeInput={this.handleChangeInput}
+          />
         </main>
         <Footer />
       </>

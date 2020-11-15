@@ -12,7 +12,13 @@ class Fill extends React.Component {
 
   renderInfo() {
     return inputsJson.map((inputJson) => {
-      return <Input key={inputJson.id} inputJson={inputJson} />;
+      return (
+        <Input
+          key={inputJson.id}
+          inputJson={inputJson}
+          handleChangeInput={this.props.handleChangeInput}
+        />
+      );
     });
   }
 

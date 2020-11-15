@@ -3,6 +3,12 @@ import React from "react";
 class Input extends React.Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(ev) {
+    console.log("el input recoge", ev.currentTarget.value);
+    this.props.handleChangeInput(ev.currentTarget.id, ev.currentTarget.value);
   }
   render() {
     console.log(this.props.inputJson);
@@ -20,7 +26,8 @@ class Input extends React.Component {
           type={this.props.inputJson.type}
           required
           id={this.props.inputJson.id}
-          name={this.props.inputJson.nameInfo}
+          name={this.props.inputJson.name}
+          onChange={this.handleChange}
         />
       </>
     );
