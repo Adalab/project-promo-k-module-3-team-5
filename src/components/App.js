@@ -10,10 +10,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleChangeInput = this.handleChangeInput.bind(this);
+    this.state = {
+      name: "",
+      job: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
+      photo: "",
+    };
   }
 
-  handleChangeInput(inputId, inputValue) {
-    console.log("app", inputId, inputValue);
+  handleChangeInput(data) {
+    console.log("app", data);
+    this.setState({
+      [data.inputId]: data.inputValue,
+    });
   }
 
   render() {
@@ -21,7 +33,7 @@ class App extends React.Component {
       <>
         <Header />
         <main className="gen-main">
-          <Preview />
+          <Preview data={this.state} />
           <Form
             inputsJson={inputsJson}
             handleChangeInput={this.handleChangeInput}

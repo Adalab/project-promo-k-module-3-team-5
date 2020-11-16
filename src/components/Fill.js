@@ -53,7 +53,7 @@ class Fill extends React.Component {
             </button>
             <input
               type="file"
-              name=""
+              // name=""
               id="img-selector"
               className="customize-menu__form-box-hidden js__box-button-hidden js-input"
               name="photo"

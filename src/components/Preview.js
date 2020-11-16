@@ -8,16 +8,17 @@ import "../stylesheets/pages/_main.scss";
 
 class Preview extends React.Component {
   render() {
+    console.log("se consolea", this.props.data);
     return (
       <section className="gen-main__container">
         <div className="gen-main__container-inner">
           <button className="btn gen-main__btn--reset js-reset">Reset</button>
           <div className="gen-main__card">
             <h2 className="card__name-surname js-nameSurname">
-              Nombre Apellido
+              {this.props.data.name || "Nombre Apellido"}
             </h2>
             <h2 className="card__occupation js-occupation">
-              Front-end developer
+              {this.props.data.job || "Front-end developer"}
             </h2>
             <div className="card__photo js-image js__profile-image">
               <div className="js-div">
@@ -57,7 +58,7 @@ class Preview extends React.Component {
               <div className="card__contact-container">
                 <a
                   className="card__contact-call js-icons js-phone"
-                  href=""
+                  href={`tel:${this.props.data.phone}`}
                   target="_blank"
                   alt="Call me"
                   title="Enlace al número de teléfono"
@@ -68,7 +69,7 @@ class Preview extends React.Component {
               <div className="card__contact-container">
                 <a
                   className="card__contact-email js-icons js-email"
-                  href=""
+                  href={`mailto:${this.props.data.email}`}
                   target="_blank"
                   alt="Email me"
                   title="Enlace al e-mail"
@@ -79,7 +80,7 @@ class Preview extends React.Component {
               <div className="card__contact-container">
                 <a
                   className="card__contact-linkedin js-icons js-linkedin"
-                  href=""
+                  href={`https://linkedin.com/in/${this.props.data.linkedin}`}
                   target="_blank"
                   alt="Find me on linkedIn"
                   title="Enlace a Linkedin"
@@ -90,7 +91,7 @@ class Preview extends React.Component {
               <div className="card__contact-container">
                 <a
                   className="card__contact-github js-icons js-github"
-                  href=""
+                  href={`https://github.com/${this.props.data.github}`}
                   target="_blank"
                   alt="I'm on GitHub!"
                   title="Enlace a Github"
