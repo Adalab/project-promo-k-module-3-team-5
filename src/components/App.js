@@ -11,10 +11,10 @@ class App extends React.Component {
     super(props);
     this.handleChangeInput = this.handleChangeInput.bind(this);
     this.state = {
-      name: "",
-      job: "",
+      fullName: "",
+      position: "",
       email: "",
-      phone: "",
+      telephone: "",
       linkedin: "",
       github: "",
       photo: "",
