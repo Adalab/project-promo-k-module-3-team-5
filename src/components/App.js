@@ -37,6 +37,7 @@ class App extends React.Component {
           <Form
             inputsJson={inputsJson}
             handleChangeInput={this.handleChangeInput}
+            data={this.state}
           />
         </main>
         <Footer />
