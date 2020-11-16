@@ -31,6 +31,7 @@ class Input extends React.Component {
           id={this.props.inputJson.id}
           name={this.props.inputJson.name}
           onChange={this.handleChange}
+          value={}
         />
       </>
     );
