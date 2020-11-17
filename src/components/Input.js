@@ -14,7 +14,7 @@ class Input extends React.Component {
     });
   }
   render() {
-    console.log(this.props.inputJson);
+    // console.log(this.props.value.name);
     return (
       <>
         <label
@@ -31,7 +31,7 @@ class Input extends React.Component {
           id={this.props.inputJson.id}
           name={this.props.inputJson.name}
           onChange={this.handleChange}
-          value={}
+          value={this.props.value}
         />
       </>
     );

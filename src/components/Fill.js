@@ -8,6 +8,7 @@ class Fill extends React.Component {
     super(props);
 
     this.renderInfo = this.renderInfo.bind(this);
+    // this.renderData = this.renderData.bind(this);
   }
 
   renderInfo() {
@@ -22,7 +23,15 @@ class Fill extends React.Component {
     });
   }
 
+  // renderData() {
+  //   const info = this.props.data;
+  //   return info.map((value, index) => {
+  //     return <Input key={index} value={value} />;
+  //   });
+  // }
+
   render() {
+    console.log(this.props.data);
     return (
       <section className="gen-main__customize-menu">
         <div className="customize-menu__container js-collapsable">
@@ -40,6 +49,7 @@ class Fill extends React.Component {
           method="post"
         >
           {this.renderInfo()}
+          {/* {this.renderData()} */}
 
           <p className="js__error-message-name js__hidden">Demasiado largo</p>
 

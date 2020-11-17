@@ -16,6 +16,7 @@ class Form extends React.Component {
         <Fill
           inputsJson={this.props.inputsJson}
           handleChangeInput={this.props.handleChangeInput}
+          data={this.props.data}
         />
         <Share />
       </nav>
