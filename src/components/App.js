@@ -18,9 +18,19 @@ class App extends React.Component {
       linkedin: "",
       github: "",
       photo: "",
+      profile: "",
     };
+    this.updateAvatar = this.updateAvatar.bind(this);
   }
-
+  updateAvatar(image) {
+    const { profile } = this.state;
+    this.setState((prevState) => {
+      const newProfile = { ...profile, avatar: "image" };
+      return {
+        profile: newProfile,
+      };
+    });
+  }
   handleChangeInput(data) {
     console.log("app", data);
     this.setState({
@@ -38,6 +48,7 @@ class App extends React.Component {
             inputsJson={inputsJson}
             handleChangeInput={this.handleChangeInput}
             data={this.state}
+            updateAvatar={this.updateAvatar}
           />
         </main>
         <Footer />

@@ -17,6 +17,7 @@ class Form extends React.Component {
           inputsJson={this.props.inputsJson}
           handleChangeInput={this.props.handleChangeInput}
           data={this.props.data}
+          updateAvatar={this.props.updateAvatar}
         />
         <Share />
       </nav>
