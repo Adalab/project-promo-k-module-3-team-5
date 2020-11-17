@@ -4,6 +4,7 @@ import cardImg2 from "../images/pin-glasses.png";
 import cardImg3 from "../images/pin-dark-hair.png";
 import cardImg4 from "../images/pin-lights.png";
 import cardImg5 from "../images/pin-long-hair.png";
+import Profile from "./Profile";
 import "../stylesheets/pages/_main.scss";
 
 class Preview extends React.Component {
