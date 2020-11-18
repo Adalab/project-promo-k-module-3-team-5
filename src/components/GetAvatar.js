@@ -11,6 +11,7 @@ class GetAvatar extends Component {
     this.handleFilePicker = this.handleFilePicker.bind(this);
     this.uploadImage = this.uploadImage.bind(this);
     this.getImage = this.getImage.bind(this);
+    this.getPreview = this.getPreview.bind(this);
   }
 
   handleFilePicker() {
@@ -29,7 +30,7 @@ class GetAvatar extends Component {
   }
 
   getPreview(isDefault, image) {
-    return !isDefault ? { backgroundImage: `url(${image})` } : {};
+    return !isDefault ? { backgroundImage: `url(${image})` } : { this.props.data.photo };
   }
 
   render() {

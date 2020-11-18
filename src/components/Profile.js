@@ -12,7 +12,7 @@ class Profile extends Component {
       <div className="card__photo js-image js__profile-image">
         <div className="js-div">
           <img
-            className="card__img-1"
+            className="card__photo"
             src={this.props.photo}
             alt={this.props.photo}
           />
