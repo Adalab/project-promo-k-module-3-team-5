@@ -30,7 +30,7 @@ class GetAvatar extends Component {
   }
 
   getPreview(isDefault, image) {
-    return !isDefault ? { backgroundImage: `url(${image})` } : { this.props.data.photo };
+    return !isDefault ? { backgroundImage: `url(${image})` } : {};
   }
 
   render() {

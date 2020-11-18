@@ -16,17 +16,17 @@ class Preview extends React.Component {
           <button className="btn gen-main__btn--reset js-reset">Reset</button>
           <div className="gen-main__card">
             <h2 className="card__name-surname js-nameSurname">
-              {this.props.data.fullName || "Nombre Apellido"}
+              {this.props.data.name || "Nombre Apellido"}
             </h2>
             <h2 className="card__occupation js-occupation">
-              {this.props.data.position || "Front-end developer"}
+              {this.props.data.job || "Front-end developer"}
             </h2>
             <Profile photo={this.props.data.photo} />
             <nav className="card__contact">
               <div className="card__contact-container">
                 <a
                   className="card__contact-call js-icons js-phone"
-                  href={`tel:${this.props.data.telephone}`}
+                  href={`tel:${this.props.data.phone}`}
                   target="_blank"
                   alt="Call me"
                   title="Enlace al número de teléfono"

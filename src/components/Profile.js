@@ -8,14 +8,19 @@ import PropTypes from "prop-types";
 
 class Profile extends Component {
   render() {
+    if (this.props.photo == "") {
+      console.log("entro en if");
+    } else {
+      this.props.pho;
+      // <img
+      //   className="card__photo"
+      //   src={this.props.photo}
+      //   alt={this.props.photo}
+      // />;
+    }
     return (
       <div className="card__photo js-image js__profile-image">
         <div className="js-div">
-          <img
-            className="card__photo"
-            src={this.props.photo}
-            alt={this.props.photo}
-          />
           <img
             className="card__img-1"
             src={cardImg1}
