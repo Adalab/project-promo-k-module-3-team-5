@@ -8,46 +8,51 @@ import PropTypes from "prop-types";
 
 class Profile extends Component {
   render() {
-    if (this.props.photo == "") {
-      console.log("entro en if");
-    } else {
-      this.props.pho;
-      // <img
-      //   className="card__photo"
-      //   src={this.props.photo}
-      //   alt={this.props.photo}
-      // />;
+    console.log(cardImg1);
+    let card1 = cardImg1;
+    let card2 = cardImg2;
+    let card3 = cardImg3;
+    let card4 = cardImg4;
+    let card5 = cardImg5;
+    let photo = this.props.photo;
+    if (photo !== "") {
+      card1 = photo;
+      card2 = photo;
+      card3 = photo;
+      card4 = photo;
+      card5 = photo;
     }
+
     return (
       <div className="card__photo js-image js__profile-image">
         <div className="js-div">
           <img
             className="card__img-1"
-            src={cardImg1}
+            src={card1}
             alt="Card Photo 1"
             title="Imagen por defecto 1"
           />
           <img
             className="card__img-2"
-            src={cardImg2}
+            src={card2}
             alt="Card Photo 2"
             title="Imagen por defecto 2"
           />
           <img
             className="card__img-3"
-            src={cardImg3}
+            src={card3}
             alt="Card Photo 3"
             title="Imagen por defecto 3"
           />
           <img
             className="card__img-4"
-            src={cardImg4}
+            src={card4}
             alt="Card Photo 4"
             title="Imagen por defecto 4"
           />
           <img
             className="card__img-5"
-            src={cardImg5}
+            src={card5}
             alt="Card Photo 5"
             title="Imagen por defecto 5"
           />

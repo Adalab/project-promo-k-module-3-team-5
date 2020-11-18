@@ -22,16 +22,9 @@ class App extends React.Component {
     this.updateAvatar = this.updateAvatar.bind(this);
   }
   updateAvatar(image) {
-    // const { profile } = this.state;
-    this.setState((prevState) => {
-      // const newProfile = { ...profile, avatar: "image" };
-      return {
-        ...prevState,
-        photo: image,
-        /*profile: newProfile,*/
-      };
-    });
+    this.setState({ photo: image });
   }
+
   handleChangeInput(data) {
     console.log("app", data);
     this.setState({

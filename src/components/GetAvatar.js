@@ -29,12 +29,11 @@ class GetAvatar extends Component {
     this.props.updateAvatar(image);
   }
 
-  getPreview(isDefault, image) {
-    return !isDefault ? { backgroundImage: `url(${image})` } : {};
+  getPreview() {
+    return { backgroundImage: `url(${this.props.data})` };
   }
 
   render() {
-    const { isAvatarDefault, avatar } = this.props;
     return (
       <div className="customize-menu__form-box">
         <button
@@ -57,7 +56,7 @@ class GetAvatar extends Component {
           <div className="customize-menu__form-image--profile js__profile-image"></div>
           <div
             className="customize-menu__form-image--preview js__profile-preview"
-            style={this.getPreview(isAvatarDefault, avatar)}
+            style={this.getPreview()}
           ></div>
         </div>
       </div>
@@ -66,8 +65,6 @@ class GetAvatar extends Component {
 }
 
 GetAvatar.propTypes = {
-  isAvatarDefault: PropTypes.bool.isRequired,
-  avatar: PropTypes.string.isRequired,
   updateAvatar: PropTypes.func.isRequired,
 };
 

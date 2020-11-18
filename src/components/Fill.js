@@ -57,7 +57,7 @@ class Fill extends React.Component {
           <p className="js__error-message-job js__hidden">Demasiado largo</p>
           <GetAvatar
             updateAvatar={this.props.updateAvatar}
-            data={this.props.data}
+            data={this.props.data.photo}
           />
         </form>
       </section>
