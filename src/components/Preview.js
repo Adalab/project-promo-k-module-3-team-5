@@ -21,7 +21,7 @@ class Preview extends React.Component {
             <h2 className="card__occupation js-occupation">
               {this.props.data.position || "Front-end developer"}
             </h2>
-            <Profile />
+            <Profile photo={this.props.data.photo} />
             <nav className="card__contact">
               <div className="card__contact-container">
                 <a

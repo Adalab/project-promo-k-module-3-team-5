@@ -18,16 +18,17 @@ class App extends React.Component {
       linkedin: "",
       github: "",
       photo: "",
-      profile: "",
     };
     this.updateAvatar = this.updateAvatar.bind(this);
   }
   updateAvatar(image) {
-    const { profile } = this.state;
+    // const { profile } = this.state;
     this.setState((prevState) => {
-      const newProfile = { ...profile, avatar: "image" };
+      // const newProfile = { ...profile, avatar: "image" };
       return {
-        profile: newProfile,
+        ...prevState,
+        photo: image,
+        /*profile: newProfile,*/
       };
     });
   }

@@ -13,33 +13,38 @@ class Profile extends Component {
         <div className="js-div">
           <img
             className="card__img-1"
+            src={this.props.photo}
+            alt={this.props.photo}
+          />
+          <img
+            className="card__img-1"
             src={cardImg1}
-            alt="Card Photo"
-            title="Imagen por defecto"
+            alt="Card Photo 1"
+            title="Imagen por defecto 1"
           />
           <img
             className="card__img-2"
             src={cardImg2}
-            alt="Card Photo"
-            title="Imagen por defecto"
+            alt="Card Photo 2"
+            title="Imagen por defecto 2"
           />
           <img
             className="card__img-3"
             src={cardImg3}
-            alt="Card Photo"
-            title="Imagen por defecto"
+            alt="Card Photo 3"
+            title="Imagen por defecto 3"
           />
           <img
             className="card__img-4"
             src={cardImg4}
-            alt="Card Photo"
-            title="Imagen por defecto"
+            alt="Card Photo 4"
+            title="Imagen por defecto 4"
           />
           <img
             className="card__img-5"
             src={cardImg5}
-            alt="Card Photo"
-            title="Imagen por defecto"
+            alt="Card Photo 5"
+            title="Imagen por defecto 5"
           />
         </div>
       </div>
