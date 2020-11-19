@@ -3,6 +3,7 @@ import Design from "./Design";
 import Fill from "./Fill";
 import Share from "./Share";
 import "../stylesheets/pages/_main.scss";
+import Collapsable from "./Collapsable";
 
 class Form extends React.Component {
   constructor(props) {
@@ -12,14 +13,20 @@ class Form extends React.Component {
   render() {
     return (
       <nav className="gen-main__customize">
-        <Design />
-        <Fill
-          inputsJson={this.props.inputsJson}
-          handleChangeInput={this.props.handleChangeInput}
-          data={this.props.data}
-          updateAvatar={this.props.updateAvatar}
-        />
-        <Share />
+        <Collapsable title="Diseña">
+          <Design />
+        </Collapsable>
+        <Collapsable>
+          <Fill
+            inputsJson={this.props.inputsJson}
+            handleChangeInput={this.props.handleChangeInput}
+            data={this.props.data}
+            updateAvatar={this.props.updateAvatar}
+          />
+        </Collapsable>
+        <Collapsable>
+          <Share />
+        </Collapsable>
       </nav>
     );
   }

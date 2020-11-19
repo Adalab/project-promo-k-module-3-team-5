@@ -5,20 +5,8 @@ class Design extends React.Component {
   render() {
     return (
       <section className="gen-main__customize-design">
-        <div
-          className="customize-design__container js-collapsable"
-          tabIndex="2"
-        >
-          <img
-            className="customize-design__container-logo"
-            src={designIcon}
-            alt="Share logo"
-          />
-          <h2 className="customize-design__container-title">Diseña</h2>
-          <button className="customize-design__container-btn js-arrow"></button>
-        </div>
         <form
-          className="customize-design__colors js__hidden js-section"
+          className="customize-design__colors  js-section"
           action=""
           method="GET"
         >
