@@ -1,35 +1,37 @@
 import React from "react";
-import designIcon from "../images/design.svg";
 
 class Collapsable extends React.Component {
-  constructor() {
-    super();
-    this.state = { isOpen: true };
+  constructor(props) {
+    super(props);
+    this.state = { isClosed: true };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.setState({
-      isOpen: !this.state.isOpen,
+      isClosed: !this.state.isClosed,
     });
   }
   render() {
-    const openClassName = this.state.isOpen ? "js__hidden" : "";
+    const openClassName = this.state.isClosed ? "js__hidden" : "";
+    const openArrow = this.state.isClosed ? "js__button-arrow" : "";
     return (
       <>
         <div
           onClick={this.handleClick}
-          className="customize-design__container js-collapsable"
+          className="customize-form__container js-collapsable"
           tabIndex="2"
         >
           <img
-            className="customize-design__container-logo"
-            src={designIcon}
+            className="customize-form__container-logo"
+            src={this.props.icon}
             alt="Share logo"
           />
-          <h2 className="customize-design__container-title">
+          <h2 className="customize-form__container-title">
             {this.props.title}
           </h2>
-          <button className="customize-design__container-btn js-arrow"></button>
+          <button
+            className={`customize-form__container-btn js-arrow ${openArrow}`}
+          ></button>
         </div>
         <div className={openClassName}>{this.props.children}</div>
       </>

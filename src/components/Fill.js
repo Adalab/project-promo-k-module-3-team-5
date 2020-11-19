@@ -1,5 +1,4 @@
 import React from "react";
-import keyboardIcon from "../images/keyboard.svg";
 import inputsJson from "../data/inputsJson.json";
 import Input from "./Input";
 import GetAvatar from "./GetAvatar";
@@ -35,17 +34,17 @@ class Fill extends React.Component {
     console.log(this.props.data);
     return (
       <section className="gen-main__customize-menu">
-        <div className="customize-menu__container js-collapsable">
+        {/* <div className="customize-menu__container js-collapsable">
           <img
             className="customize-menu__container-logo"
-            src={keyboardIcon}
+            // src={keyboardIcon}
             alt="keyboard icon"
           />
           <h2 className="customize-menu__container-title">Rellena</h2>
           <button className="customize-menu__container-btn js-arrow"></button>
-        </div>
+        </div> */}
         <form
-          className="customize-menu__form js__hidden js-section"
+          className="customize-menu__form  js-section"
           action=""
           method="post"
         >

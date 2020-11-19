@@ -1,5 +1,4 @@
 import React from "react";
-import designIcon from "../images/design.svg";
 
 class Design extends React.Component {
   render() {

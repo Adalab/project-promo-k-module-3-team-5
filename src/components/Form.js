@@ -4,6 +4,9 @@ import Fill from "./Fill";
 import Share from "./Share";
 import "../stylesheets/pages/_main.scss";
 import Collapsable from "./Collapsable";
+import designIcon from "../images/design.svg";
+import keyboardIcon from "../images/keyboard.svg";
+import shareIcon from "../images/share.svg";
 
 class Form extends React.Component {
   constructor(props) {
@@ -13,10 +16,10 @@ class Form extends React.Component {
   render() {
     return (
       <nav className="gen-main__customize">
-        <Collapsable title="Diseña">
+        <Collapsable title="Diseña" icon={designIcon}>
           <Design />
         </Collapsable>
-        <Collapsable>
+        <Collapsable title="Rellena" icon={keyboardIcon}>
           <Fill
             inputsJson={this.props.inputsJson}
             handleChangeInput={this.props.handleChangeInput}
@@ -24,7 +27,7 @@ class Form extends React.Component {
             updateAvatar={this.props.updateAvatar}
           />
         </Collapsable>
-        <Collapsable>
+        <Collapsable title="Comparte" icon={shareIcon}>
           <Share />
         </Collapsable>
       </nav>

@@ -194,7 +194,7 @@ body {
 .card__contact-containeryass.palette-3 {
   border-color: $color-lightgrey;
 }
-.customize-design__container {
+.customize-form__container {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -354,7 +354,7 @@ body {
   }
 }
 /*RELLENA*/
-.customize-menu__container {
+.customize-form__container {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
@@ -474,7 +474,7 @@ body {
     border-bottom: 1px solid $color-border;
   }
 }
-.customize-share__container {
+.customize-form__container {
   display: flex;
   position: relative;
   &-title {
@@ -577,9 +577,7 @@ body {
     margin: 0;
   }
 }
-.customize-design__container-btn,
-.customize-menu__container-btn,
-.customize-share__container-btn {
+.customize-form__container-btn {
   background-image: url(../../images/angle-down.svg);
   background-repeat: no-repeat;
   background-size: 16px 18px;
