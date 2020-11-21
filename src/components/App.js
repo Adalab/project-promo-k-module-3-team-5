@@ -1,51 +1,16 @@
 import React from "react";
-import "../stylesheets/App.scss";
-import Header from "./Header";
-import Preview from "./Preview";
-import Form from "./Form";
-import Footer from "./Footer";
-import inputsJson from "../data/inputsJson.json";
+import { Route, Switch } from "react-router-dom";
+import Landing from "./Landing";
+import CardGenerator from "./CardGenerator";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChangeInput = this.handleChangeInput.bind(this);
-    this.state = {
-      name: "",
-      job: "",
-      email: "",
-      phone: "",
-      linkedin: "",
-      github: "",
-      photo: "",
-    };
-    this.updateAvatar = this.updateAvatar.bind(this);
-  }
-  updateAvatar(image) {
-    this.setState({ photo: image });
-  }
-
-  handleChangeInput(data) {
-    console.log("app", data);
-    this.setState({
-      [data.inputName]: data.inputValue,
-    });
-  }
-
   render() {
     return (
       <>
-        <Header />
-        <main className="gen-main">
-          <Preview data={this.state} />
-          <Form
-            inputsJson={inputsJson}
-            handleChangeInput={this.handleChangeInput}
-            data={this.state}
-            updateAvatar={this.updateAvatar}
-          />
-        </main>
-        <Footer />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/card-generator" component={CardGenerator} />
+        </Switch>
       </>
     );
   }
