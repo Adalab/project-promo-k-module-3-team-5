@@ -29,6 +29,7 @@ class Design extends React.Component {
               value="greenpalette"
               name="colors"
               onChange={this.handleChangePalette}
+
               // checked={this.props.palette === "greenpalette" ? true : false}
             />
             <div className="customize-design__colors1-boxes1"></div>

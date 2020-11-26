@@ -23,6 +23,7 @@ class CardGenerator extends React.Component {
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleChangeInput = this.handleChangeInput.bind(this);
     this.handleChangePalette = this.handleChangePalette.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
   updateAvatar(image) {
     this.setState({ photo: image });
@@ -43,12 +44,25 @@ class CardGenerator extends React.Component {
     }
   }
 
+  handleReset() {
+    this.setState({
+      name: "",
+      job: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
+      photo: "",
+      palette: 1,
+    });
+  }
+
   render() {
     return (
       <>
         <Header />
         <main className="gen-main">
-          <Preview data={this.state} />
+          <Preview data={this.state} handleReset={this.handleReset} />
           <Form
             inputsJson={inputsJson}
             handleChangeInput={this.handleChangeInput}

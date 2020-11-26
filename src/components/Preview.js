@@ -2,10 +2,10 @@ import React from "react";
 
 import Profile from "./Profile";
 import "../stylesheets/pages/_main.scss";
+import Reset from "./Reset";
 
 const Preview = (props) => {
   let selectedPalette;
-  console.log(props.data.palette);
 
   if (props.data.palette === 1) {
     selectedPalette = "palette-1";
@@ -18,7 +18,7 @@ const Preview = (props) => {
   return (
     <section className="gen-main__container">
       <div className="gen-main__container-inner">
-        <button className="btn gen-main__btn--reset js-reset">Reset</button>
+        <Reset handleReset={props.handleReset} />
         <div className="gen-main__card">
           <h2
             className={`card__name-surname js-nameSurname ${selectedPalette}`}

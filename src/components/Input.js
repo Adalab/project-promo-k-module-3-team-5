@@ -12,8 +12,9 @@ class Input extends React.Component {
       inputValue: ev.currentTarget.value,
     });
   }
+
   render() {
-    // console.log(this.props.value.name);
+    console.log(this.props.data);
     return (
       <>
         <label
@@ -30,7 +31,7 @@ class Input extends React.Component {
           id={this.props.inputJson.id}
           name={this.props.inputJson.name}
           onChange={this.handleChange}
-          value={this.props.value}
+          value={this.props.state}
         />
       </>
     );

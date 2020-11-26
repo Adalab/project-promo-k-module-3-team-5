@@ -20,6 +20,7 @@ class Form extends React.Component {
           <Design
             handleChangePalette={this.props.handleChangePalette}
             palette={this.props.data.palette}
+            handleReset={this.props.handleReset}
           />
         </Collapsable>
         <Collapsable title="Rellena" icon={keyboardIcon}>
@@ -28,6 +29,7 @@ class Form extends React.Component {
             handleChangeInput={this.props.handleChangeInput}
             data={this.props.data}
             updateAvatar={this.props.updateAvatar}
+            handleReset={this.props.handleReset}
           />
         </Collapsable>
         <Collapsable title="Comparte" icon={shareIcon}>

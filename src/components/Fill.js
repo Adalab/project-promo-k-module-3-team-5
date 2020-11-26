@@ -8,8 +8,15 @@ class Fill extends React.Component {
     super(props);
 
     this.renderInfo = this.renderInfo.bind(this);
-    // this.renderData = this.renderData.bind(this);
+    // this.state = this.state.bind(this);
   }
+
+  // state() {
+  //   let data = this.props.data;
+  //   for (let state of data) {
+  //     console.log(state);
+  //   }
+  // }
 
   renderInfo() {
     return inputsJson.map((inputJson) => {
@@ -18,40 +25,24 @@ class Fill extends React.Component {
           key={inputJson.id}
           inputJson={inputJson}
           handleChangeInput={this.props.handleChangeInput}
+          handleReset={this.props.handleReset}
+          // state={this.state()}
         />
       );
     });
   }
 
-  // renderData() {
-  //   const info = this.props.data;
-  //   return info.map((value, index) => {
-  //     return <Input key={index} value={value} />;
-  //   });
-  // }
-
   render() {
+    console.log(this.props.data);
     return (
       <section className="gen-main__customize-menu">
-        {/* <div className="customize-menu__container js-collapsable">
-          <img
-            className="customize-menu__container-logo"
-            // src={keyboardIcon}
-            alt="keyboard icon"
-          />
-          <h2 className="customize-menu__container-title">Rellena</h2>
-          <button className="customize-menu__container-btn js-arrow"></button>
-        </div> */}
         <form
           className="customize-menu__form  js-section"
           action=""
           method="post"
         >
           {this.renderInfo()}
-          {/* {this.renderData()} */}
-
           <p className="js__error-message-name js__hidden">Demasiado largo</p>
-
           <p className="js__error-message-job js__hidden">Demasiado largo</p>
           <GetAvatar
             updateAvatar={this.props.updateAvatar}
