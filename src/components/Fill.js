@@ -31,7 +31,6 @@ class Fill extends React.Component {
   // }
 
   render() {
-    console.log(this.props.data);
     return (
       <section className="gen-main__customize-menu">
         {/* <div className="customize-menu__container js-collapsable">

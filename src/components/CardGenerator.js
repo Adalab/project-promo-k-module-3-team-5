@@ -9,7 +9,7 @@ import inputsJson from "../data/inputsJson.json";
 class CardGenerator extends React.Component {
   constructor(props) {
     super(props);
-    this.handleChangeInput = this.handleChangeInput.bind(this);
+
     this.state = {
       name: "",
       job: "",
@@ -18,20 +18,31 @@ class CardGenerator extends React.Component {
       linkedin: "",
       github: "",
       photo: "",
+      palette: 1,
     };
     this.updateAvatar = this.updateAvatar.bind(this);
+    this.handleChangeInput = this.handleChangeInput.bind(this);
+    this.handleChangePalette = this.handleChangePalette.bind(this);
   }
   updateAvatar(image) {
     this.setState({ photo: image });
   }
 
   handleChangeInput(data) {
-    console.log("app", data);
     this.setState({
       [data.inputName]: data.inputValue,
     });
   }
-
+  handleChangePalette(paletteValue) {
+    console.log("color", paletteValue);
+    if (paletteValue === "greenpalette") {
+      this.setState({ palette: 1 });
+    } else if (paletteValue === "orangepalette") {
+      this.setState({ palette: 2 });
+    } else if (paletteValue === "bluepalette") {
+      this.setState({ palette: 3 });
+    }
+  }
   render() {
     return (
       <>
@@ -43,6 +54,7 @@ class CardGenerator extends React.Component {
             handleChangeInput={this.handleChangeInput}
             data={this.state}
             updateAvatar={this.updateAvatar}
+            handleChangePalette={this.handleChangePalette}
           />
         </main>
         <Footer />

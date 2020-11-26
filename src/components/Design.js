@@ -1,6 +1,13 @@
 import React from "react";
 
 class Design extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChangePalette = this.handleChangePalette.bind(this);
+  }
+  handleChangePalette(ev) {
+    this.props.handleChangePalette(ev.target.value);
+  }
   render() {
     return (
       <section className="gen-main__customize-design">
@@ -21,6 +28,7 @@ class Design extends React.Component {
               id="colors1"
               value="greenpalette"
               name="colors"
+              onChange={this.handleChangePalette}
             />
             <div className="customize-design__colors1-boxes1"></div>
             <div className="customize-design__colors1-boxes2"></div>
@@ -37,6 +45,7 @@ class Design extends React.Component {
               id="colors2"
               value="orangepalette"
               name="colors"
+              onChange={this.handleChangePalette}
             />
             <div className="customize-design__colors2-boxes1"></div>
             <div className="customize-design__colors2-boxes2"></div>
@@ -53,6 +62,7 @@ class Design extends React.Component {
               id="colors3"
               value="bluepalette"
               name="colors"
+              onChange={this.handleChangePalette}
             />
             <div className="customize-design__colors3-boxes1"></div>
             <div className="customize-design__colors3-boxes2"></div>

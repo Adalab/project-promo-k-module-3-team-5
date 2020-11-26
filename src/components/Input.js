@@ -7,7 +7,6 @@ class Input extends React.Component {
   }
 
   handleChange(ev) {
-    console.log("el input recoge", ev.currentTarget.value);
     this.props.handleChangeInput({
       inputName: ev.currentTarget.name,
       inputValue: ev.currentTarget.value,

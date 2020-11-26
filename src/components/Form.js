@@ -17,7 +17,7 @@ class Form extends React.Component {
     return (
       <nav className="gen-main__customize">
         <Collapsable title="Diseña" icon={designIcon}>
-          <Design />
+          <Design handleChangePalette={this.props.handleChangePalette} />
         </Collapsable>
         <Collapsable title="Rellena" icon={keyboardIcon}>
           <Fill
