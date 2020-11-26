@@ -34,7 +34,6 @@ class CardGenerator extends React.Component {
     });
   }
   handleChangePalette(paletteValue) {
-    console.log("color", paletteValue);
     if (paletteValue === "greenpalette") {
       this.setState({ palette: 1 });
     } else if (paletteValue === "orangepalette") {
@@ -43,6 +42,7 @@ class CardGenerator extends React.Component {
       this.setState({ palette: 3 });
     }
   }
+
   render() {
     return (
       <>
