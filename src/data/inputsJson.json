@@ -6,8 +6,7 @@
     "placeholder": "Ej: Sally Jill",
     "type": "text",
     "id": "fullName",
-    "name": "name",
-    "value": ""
+    "name": "name"
   },
   {
     "labelText": "Puesto",

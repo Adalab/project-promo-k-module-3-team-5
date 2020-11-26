@@ -26,14 +26,13 @@ class Fill extends React.Component {
           inputJson={inputJson}
           handleChangeInput={this.props.handleChangeInput}
           handleReset={this.props.handleReset}
-          state={this.props.data}
+          value={this.props.data[inputJson.name]}
         />
       );
     });
   }
 
   render() {
-    console.log(this.props.data);
     return (
       <section className="gen-main__customize-menu">
         <form

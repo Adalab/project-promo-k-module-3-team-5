@@ -9,7 +9,6 @@ class Design extends React.Component {
     this.props.handleChangePalette(ev.target.value);
   }
   render() {
-    console.log(this.props.palette);
     return (
       <section className="gen-main__customize-design">
         <form
