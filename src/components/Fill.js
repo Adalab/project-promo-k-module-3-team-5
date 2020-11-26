@@ -26,7 +26,7 @@ class Fill extends React.Component {
           inputJson={inputJson}
           handleChangeInput={this.props.handleChangeInput}
           handleReset={this.props.handleReset}
-          // state={this.state()}
+          state={this.props.data}
         />
       );
     });

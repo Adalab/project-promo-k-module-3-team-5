@@ -34,6 +34,7 @@ class CardGenerator extends React.Component {
       [data.inputName]: data.inputValue,
     });
   }
+
   handleChangePalette(paletteValue) {
     if (paletteValue === "greenpalette") {
       this.setState({ palette: 1 });

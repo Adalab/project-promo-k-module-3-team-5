@@ -9,6 +9,7 @@ class Design extends React.Component {
     this.props.handleChangePalette(ev.target.value);
   }
   render() {
+    console.log(this.props.palette);
     return (
       <section className="gen-main__customize-design">
         <form
@@ -29,8 +30,7 @@ class Design extends React.Component {
               value="greenpalette"
               name="colors"
               onChange={this.handleChangePalette}
-
-              // checked={this.props.palette === "greenpalette" ? true : false}
+              checked={this.props.palette === 1 ? true : false}
             />
             <div className="customize-design__colors1-boxes1"></div>
             <div className="customize-design__colors1-boxes2"></div>
@@ -48,7 +48,7 @@ class Design extends React.Component {
               value="orangepalette"
               name="colors"
               onChange={this.handleChangePalette}
-              // checked={this.props.palette === "orangepalette" ? true : false}
+              checked={this.props.palette === 2 ? true : false}
             />
             <div className="customize-design__colors2-boxes1"></div>
             <div className="customize-design__colors2-boxes2"></div>
@@ -66,7 +66,7 @@ class Design extends React.Component {
               value="bluepalette"
               name="colors"
               onChange={this.handleChangePalette}
-              // checked={this.props.palette === "bluepalette" ? true : false}
+              checked={this.props.palette === 3 ? true : false}
             />
             <div className="customize-design__colors3-boxes1"></div>
             <div className="customize-design__colors3-boxes2"></div>
