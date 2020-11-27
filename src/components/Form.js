@@ -33,7 +33,7 @@ class Form extends React.Component {
           />
         </Collapsable>
         <Collapsable title="Comparte" icon={shareIcon}>
-          <Share />
+          <Share handleCardClick={this.props.handleCardClick} />
         </Collapsable>
       </nav>
     );

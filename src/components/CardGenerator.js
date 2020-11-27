@@ -5,6 +5,7 @@ import Preview from "./Preview";
 import Form from "./Form";
 import Footer from "./Footer";
 import inputsJson from "../data/inputsJson.json";
+import createCard from "../services/api";
 
 class CardGenerator extends React.Component {
   constructor(props) {
@@ -88,6 +89,8 @@ class CardGenerator extends React.Component {
       });
     }
   }
+  createCard() {}
+  handleCardClick() {}
 
   render() {
     return (
@@ -101,6 +104,7 @@ class CardGenerator extends React.Component {
             data={this.state}
             updateAvatar={this.updateAvatar}
             handleChangePalette={this.handleChangePalette}
+            handleCardClick={this.handleCardClick}
           />
         </main>
         <Footer />
