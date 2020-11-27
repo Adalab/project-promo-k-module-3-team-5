@@ -25,6 +25,7 @@ class CardGenerator extends React.Component {
     this.handleChangePalette = this.handleChangePalette.bind(this);
     this.handleReset = this.handleReset.bind(this);
   }
+
   updateAvatar(image) {
     this.setState({ photo: image });
   }
@@ -56,6 +57,36 @@ class CardGenerator extends React.Component {
       photo: "",
       palette: 1,
     });
+  }
+
+  //LOCAL STORAGE
+  componentDidMount() {
+    this.getFromLocalStorage();
+  }
+
+  componentDidUpdate() {
+    this.setLocalStorage();
+  }
+
+  setLocalStorage() {
+    localStorage.setItem("data", JSON.stringify(this.state));
+  }
+
+  getFromLocalStorage() {
+    if (localStorage.getItem("data")) {
+      const data = JSON.parse(localStorage.getItem("data"));
+      console.log(data);
+      this.setState({
+        name: data.name,
+        job: data.job,
+        email: data.email,
+        phone: data.phone,
+        linkedin: data.linkedin,
+        github: data.github,
+        photo: data.photo,
+        palette: data.palette,
+      });
+    }
   }
 
   render() {

@@ -6,17 +6,8 @@ import GetAvatar from "./GetAvatar";
 class Fill extends React.Component {
   constructor(props) {
     super(props);
-
     this.renderInfo = this.renderInfo.bind(this);
-    // this.state = this.state.bind(this);
   }
-
-  // state() {
-  //   let data = this.props.data;
-  //   for (let state of data) {
-  //     console.log(state);
-  //   }
-  // }
 
   renderInfo() {
     return inputsJson.map((inputJson) => {
