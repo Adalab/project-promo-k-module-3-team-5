@@ -5,12 +5,13 @@ import Preview from "./Preview";
 import Form from "./Form";
 import Footer from "./Footer";
 import inputsJson from "../data/inputsJson.json";
-import createCard from "../services/api";
+import api from "../services/api";
 
 class CardGenerator extends React.Component {
   constructor(props) {
     super(props);
 
+    //STATE
     this.state = {
       name: "",
       job: "",
@@ -20,13 +21,19 @@ class CardGenerator extends React.Component {
       github: "",
       photo: "",
       palette: 1,
+      apiSuccess: false,
+      apiCardUrl: "",
+      apiError: "",
     };
+
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleChangeInput = this.handleChangeInput.bind(this);
     this.handleChangePalette = this.handleChangePalette.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.sendRequest = this.sendRequest.bind(this);
   }
 
+  //EVENT HANDLER
   updateAvatar(image) {
     this.setState({ photo: image });
   }
@@ -76,7 +83,7 @@ class CardGenerator extends React.Component {
   getFromLocalStorage() {
     if (localStorage.getItem("data")) {
       const data = JSON.parse(localStorage.getItem("data"));
-      console.log(data);
+
       this.setState({
         name: data.name,
         job: data.job,
@@ -89,8 +96,43 @@ class CardGenerator extends React.Component {
       });
     }
   }
-  createCard() {}
-  handleCardClick() {}
+
+  //CREATE CARD
+  //obj con los datos que quiero enviar al servidor
+  sendRequest() {
+    const apiData = {
+      name: this.state.name,
+      job: this.state.job,
+      email: this.state.email,
+      phone: this.state.phone,
+      linkedin: this.state.linkedin,
+      github: this.state.github,
+      photo: this.state.photo,
+      palette: this.state.palette,
+    };
+
+    //envio los datos al servidor
+    api
+      .createCard(apiData)
+      //espero a que responda
+      .then((response) => {
+        //guardo las respuesta en el estado
+        if (response.success === true) {
+          this.setState({
+            apiSuccess: true,
+            apiCardUrl: response.cardURL,
+            apiError: "",
+          });
+        } else {
+          this.setState({
+            apiSuccess: false,
+            apiCardUrl: "",
+            apiError: response.error,
+          });
+        }
+      });
+    console.log(apiData);
+  }
 
   render() {
     return (
@@ -104,7 +146,7 @@ class CardGenerator extends React.Component {
             data={this.state}
             updateAvatar={this.updateAvatar}
             handleChangePalette={this.handleChangePalette}
-            handleCardClick={this.handleCardClick}
+            sendRequest={this.sendRequest}
           />
         </main>
         <Footer />

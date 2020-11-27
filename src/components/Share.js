@@ -1,9 +1,10 @@
 import React from "react";
 
 const Share = (props) => {
-  const handleCardClick = () => {
-    props.handleCardClick();
+  const sendRequest = () => {
+    props.sendRequest();
   };
+
   return (
     <>
       <section className="gen-main__customize-share ">
@@ -12,20 +13,23 @@ const Share = (props) => {
           title="Crear la tarjeta"
           href=""
           target="_blank"
-          onClick={handleCardClick}
+          onClick={sendRequest}
         >
           Crear tarjeta
         </a>
       </section>
-      <section className="gen-main__customize-share--hidden js__hiddenlink js-sectionHidden">
+
+      <section className=" gen-main__customize-share--hidden js__hiddenlink js-sectionHidden">
         <p className="customize-share__text--hidden">
           La tarjeta ha sido creada:
         </p>
+
         <a
           className="js-twitter-url customize-share__web--hidden"
           href=""
           target="_blank"
         ></a>
+
         <a className="customize-share__twitter--hidden" href="">
           Compartir en twitter
         </a>
