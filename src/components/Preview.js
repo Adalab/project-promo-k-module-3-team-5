@@ -1,5 +1,4 @@
 import React from "react";
-
 import Profile from "./Profile";
 import "../stylesheets/pages/_main.scss";
 import Reset from "./Reset";

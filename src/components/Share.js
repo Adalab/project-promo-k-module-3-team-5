@@ -60,9 +60,8 @@ const Share = (props) => {
           className="customize-share__twitter--hidden"
           href={`https://twitter.com/intent/tweet?text=${twitter}&url=${props.data.apiCardUrl}`}
         >
-          Compartir en twitter
+          Compartir en Twitter
         </a>
-        )
       </section>
     </>
   );
