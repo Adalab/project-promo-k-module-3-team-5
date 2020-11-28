@@ -132,7 +132,7 @@ class CardGenerator extends React.Component {
       photo: this.state.photo,
       palette: this.state.palette,
     };
-
+    console.log(apiData);
     //envio los datos al servidor
     api
       .createCard(apiData)
@@ -153,7 +153,6 @@ class CardGenerator extends React.Component {
           });
         }
       });
-    console.log(apiData);
   }
 
   render() {

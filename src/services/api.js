@@ -11,6 +11,7 @@ const createCard = (data) => {
   )
     .then((resp) => resp.json())
     .then((result) => {
+      console.log(result);
       return result;
     })
     .catch(() => {

@@ -2,43 +2,40 @@ import React, { useState } from "react";
 
 const Share = (props) => {
   const [isHidden, setIsHidden] = useState(true);
+  const [twitter] = useState(
+    encodeURIComponent(
+      "He creado una tarjeta de visita gracias a las <!Surrender/>"
+    )
+  );
   const sendRequest = () => {
     props.sendRequest();
     setIsHidden(false);
-    const [twitter] = useState(
-      encodeURIComponent(
-        "He creado una tarjeta de visita gracias a las <!Surrender/>"
-      )
-    );
   };
 
   return (
     <>
       <section className="gen-main__customize-share ">
-        <a
-          title="Crear la tarjeta"
-          href=""
-          target="_blank"
+        <button
           onClick={sendRequest}
-          disabled={props.isClickable ? false : true}
+          disabled={props.data.isClickable ? true : false}
           className={
-            props.isClickable
+            props.data.isClickable
               ? "customize-share__button  js-section js-createBtn js-cardCreated"
               : "customize-share__button  js-section js-createBtn"
           }
         >
           Crear tarjeta
-        </a>
+        </button>
       </section>
 
       <section
         className={
           isHidden
             ? "gen-main__customize-share--hidden js__hiddenlink js-sectionHidden"
-            : "gen-main__customize-share--hidden js__hiddenlink"
+            : "gen-main__customize-share--hidden js-sectionHidden"
         }
       >
-        {props.apiCardUrl ? (
+        {props.data.apiCardUrl ? (
           <>
             <p className="customize-share__text--hidden">
               La tarjeta ha sido creada:
@@ -46,22 +43,22 @@ const Share = (props) => {
 
             <a
               className="js-twitter-url customize-share__web--hidden"
-              href={props.apiCardUrl}
+              href={props.data.apiCardUrl}
               title="card Link"
               target="_blank"
             >
-              {props.apiCardUrl}
+              {props.data.apiCardUrl}
             </a>
           </>
         ) : (
           <>
             <h3 className="share__finish--title">Error:</h3>
-            <p className="card-link">{props.apiError}</p>
+            <p className="card-link">{props.data.apiError}</p>
           </>
         )}
         <a
           className="customize-share__twitter--hidden"
-          href={`https://twitter.com/intent/tweet?text=${twitter}&url=${props.apiCardUrl}`}
+          href={`https://twitter.com/intent/tweet?text=${twitter}&url=${props.data.apiCardUrl}`}
         >
           Compartir en twitter
         </a>
