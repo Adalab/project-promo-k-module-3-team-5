@@ -5,11 +5,13 @@ import Preview from "./Preview";
 import Form from "./Form";
 import Footer from "./Footer";
 import inputsJson from "../data/inputsJson.json";
+import api from "../services/api";
 
 class CardGenerator extends React.Component {
   constructor(props) {
     super(props);
 
+    //STATE
     this.state = {
       name: "",
       job: "",
@@ -19,13 +21,20 @@ class CardGenerator extends React.Component {
       github: "",
       photo: "",
       palette: 1,
+      apiSuccess: false,
+      apiCardUrl: "",
+      apiError: "",
+      isClickable: false,
     };
+
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleChangeInput = this.handleChangeInput.bind(this);
     this.handleChangePalette = this.handleChangePalette.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.sendRequest = this.sendRequest.bind(this);
   }
 
+  //EVENT HANDLER
   updateAvatar(image) {
     this.setState({ photo: image });
   }
@@ -59,6 +68,26 @@ class CardGenerator extends React.Component {
     });
   }
 
+  //Activar botón "crear tarjeta"
+
+  clickShareBtn() {
+    let clickable = false;
+    if (
+      this.state.name.length !== 0 &&
+      this.state.job.length !== 0 &&
+      this.state.email.length !== 0 &&
+      this.state.phone.length !== 0 &&
+      this.state.linkedin.length !== 0 &&
+      this.state.github.length !== 0 &&
+      this.state.photo.includes("64")
+    ) {
+      clickable = true;
+    }
+    this.setState((prevState) => ({
+      isClickable: (prevState.isClickable = clickable),
+    }));
+  }
+
   //LOCAL STORAGE
   componentDidMount() {
     this.getFromLocalStorage();
@@ -75,7 +104,7 @@ class CardGenerator extends React.Component {
   getFromLocalStorage() {
     if (localStorage.getItem("data")) {
       const data = JSON.parse(localStorage.getItem("data"));
-      console.log(data);
+
       this.setState({
         name: data.name,
         job: data.job,
@@ -87,6 +116,43 @@ class CardGenerator extends React.Component {
         palette: data.palette,
       });
     }
+    // clickShareBtn();
+  }
+
+  //CREATE CARD
+  //obj con los datos que quiero enviar al servidor
+  sendRequest() {
+    const apiData = {
+      name: this.state.name,
+      job: this.state.job,
+      email: this.state.email,
+      phone: this.state.phone,
+      linkedin: this.state.linkedin,
+      github: this.state.github,
+      photo: this.state.photo,
+      palette: this.state.palette,
+    };
+    console.log(apiData);
+    //envio los datos al servidor
+    api
+      .createCard(apiData)
+      //espero a que responda
+      .then((response) => {
+        //guardo las respuesta en el estado
+        if (response.success === true) {
+          this.setState({
+            apiSuccess: true,
+            apiCardUrl: response.cardURL,
+            apiError: "",
+          });
+        } else {
+          this.setState({
+            apiSuccess: false,
+            apiCardUrl: "",
+            apiError: response.error,
+          });
+        }
+      });
   }
 
   render() {
@@ -101,6 +167,7 @@ class CardGenerator extends React.Component {
             data={this.state}
             updateAvatar={this.updateAvatar}
             handleChangePalette={this.handleChangePalette}
+            sendRequest={this.sendRequest}
           />
         </main>
         <Footer />

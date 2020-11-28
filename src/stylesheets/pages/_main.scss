@@ -517,6 +517,7 @@ body {
   background-size: 25px;
   background-position: 17px 14px;
   transition: ease 1s;
+  cursor: pointer;
   @include tablet {
     align-self: center;
   }
@@ -612,8 +613,6 @@ body {
 
 .js-cardCreated {
   background-color: $color-softwhite;
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .js__hidden-img {
