@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Loading from "./Loading";
 
 const Share = (props) => {
   const [isHidden, setIsHidden] = useState(true);
@@ -52,8 +53,14 @@ const Share = (props) => {
           </>
         ) : (
           <>
-            <h3 className="share__finish--title">Error:</h3>
-            <p className="card-link">{props.data.apiError}</p>
+            {props.data.isLoading === true ? (
+              <Loading />
+            ) : (
+              <>
+                <h3 className="share__finish--title">Error:</h3>
+                <p className="card-link">{props.data.apiError}</p>
+              </>
+            )}
           </>
         )}
         <a

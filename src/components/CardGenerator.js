@@ -25,6 +25,7 @@ class CardGenerator extends React.Component {
       apiCardUrl: "",
       apiError: "",
       isClickable: false,
+      isLoading: false,
     };
 
     this.updateAvatar = this.updateAvatar.bind(this);
@@ -121,6 +122,7 @@ class CardGenerator extends React.Component {
   //CREATE CARD
   //obj con los datos que quiero enviar al servidor
   sendRequest() {
+    this.setState({ isLoading: true });
     const apiData = {
       name: this.state.name,
       job: this.state.job,
@@ -142,12 +144,14 @@ class CardGenerator extends React.Component {
             apiSuccess: true,
             apiCardUrl: response.cardURL,
             apiError: "",
+            isLoading: false,
           });
         } else {
           this.setState({
             apiSuccess: false,
             apiCardUrl: "",
             apiError: response.error,
+            isLoading: false,
           });
         }
       });
