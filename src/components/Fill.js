@@ -25,21 +25,15 @@ class Fill extends React.Component {
 
   render() {
     return (
-      <section className="gen-main__customize-menu">
-        <form
-          className="customize-menu__form  js-section"
-          action=""
-          method="post"
-        >
-          {this.renderInfo()}
-          <p className="js__error-message-name js__hidden">Demasiado largo</p>
-          <p className="js__error-message-job js__hidden">Demasiado largo</p>
-          <GetAvatar
-            updateAvatar={this.props.updateAvatar}
-            data={this.props.data.photo}
-          />
-        </form>
-      </section>
+      <>
+        {this.renderInfo()}
+        <p className="js__error-message-name js__hidden">Demasiado largo</p>
+        <p className="js__error-message-job js__hidden">Demasiado largo</p>
+        <GetAvatar
+          updateAvatar={this.props.updateAvatar}
+          data={this.props.data.photo}
+        />
+      </>
     );
   }
 }
