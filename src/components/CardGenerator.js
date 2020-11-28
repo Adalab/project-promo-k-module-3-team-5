@@ -24,6 +24,7 @@ class CardGenerator extends React.Component {
       apiSuccess: false,
       apiCardUrl: "",
       apiError: "",
+      isClickable: false,
     };
 
     this.updateAvatar = this.updateAvatar.bind(this);
@@ -67,6 +68,26 @@ class CardGenerator extends React.Component {
     });
   }
 
+  //Activar botón "crear tarjeta"
+
+  clickShareBtn() {
+    let clickable = false;
+    if (
+      this.state.name.length !== 0 &&
+      this.state.job.length !== 0 &&
+      this.state.email.length !== 0 &&
+      this.state.phone.length !== 0 &&
+      this.state.linkedin.length !== 0 &&
+      this.state.github.length !== 0 &&
+      this.state.photo.includes("64")
+    ) {
+      clickable = true;
+    }
+    this.setState((prevState) => ({
+      isClickable: (prevState.isClickable = clickable),
+    }));
+  }
+
   //LOCAL STORAGE
   componentDidMount() {
     this.getFromLocalStorage();
@@ -95,6 +116,7 @@ class CardGenerator extends React.Component {
         palette: data.palette,
       });
     }
+    // clickShareBtn();
   }
 
   //CREATE CARD

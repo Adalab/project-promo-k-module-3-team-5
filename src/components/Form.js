@@ -33,7 +33,7 @@ class Form extends React.Component {
           />
         </Collapsable>
         <Collapsable title="Comparte" icon={shareIcon}>
-          <Share sendRequest={this.props.sendRequest} />
+          <Share sendRequest={this.props.sendRequest} data={this.props.data} />
         </Collapsable>
       </nav>
     );
