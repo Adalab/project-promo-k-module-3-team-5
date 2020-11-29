@@ -10,7 +10,7 @@ import Footer from "./Footer";
 class Landing extends React.Component {
   render() {
     return (
-      <>
+      <div className="landing">
         <main role="main" class="main">
           <img
             src={logoLanding}
@@ -64,7 +64,7 @@ class Landing extends React.Component {
           </Link>
         </main>
         <Footer />
-      </>
+      </div>
     );
   }
 }

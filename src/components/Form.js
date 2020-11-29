@@ -17,7 +17,11 @@ class Form extends React.Component {
     return (
       <nav className="gen-main__customize">
         <Collapsable title="Diseña" icon={designIcon}>
-          <Design />
+          <Design
+            handleChangePalette={this.props.handleChangePalette}
+            palette={this.props.data.palette}
+            handleReset={this.props.handleReset}
+          />
         </Collapsable>
         <Collapsable title="Rellena" icon={keyboardIcon}>
           <Fill
@@ -25,10 +29,11 @@ class Form extends React.Component {
             handleChangeInput={this.props.handleChangeInput}
             data={this.props.data}
             updateAvatar={this.props.updateAvatar}
+            handleReset={this.props.handleReset}
           />
         </Collapsable>
         <Collapsable title="Comparte" icon={shareIcon}>
-          <Share />
+          <Share sendRequest={this.props.sendRequest} data={this.props.data} />
         </Collapsable>
       </nav>
     );

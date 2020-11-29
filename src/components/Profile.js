@@ -4,11 +4,9 @@ import cardImg2 from "../images/pin-glasses.png";
 import cardImg3 from "../images/pin-dark-hair.png";
 import cardImg4 from "../images/pin-lights.png";
 import cardImg5 from "../images/pin-long-hair.png";
-import PropTypes from "prop-types";
 
 class Profile extends Component {
   render() {
-    console.log(cardImg1);
     let card1 = cardImg1;
     let card2 = cardImg2;
     let card3 = cardImg3;
@@ -61,9 +59,5 @@ class Profile extends Component {
     );
   }
 }
-
-Profile.propTypes = {
-  avatar: PropTypes.string.isRequired,
-};
 
 export default Profile;
