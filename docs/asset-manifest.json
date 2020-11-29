@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "./static/css/main.5b132b7a.chunk.css",
-    "main.js": "./static/js/main.28a34496.chunk.js",
-    "main.js.map": "./static/js/main.28a34496.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.5ae22cf7.js",
-    "runtime-main.js.map": "./static/js/runtime-main.5ae22cf7.js.map",
-    "static/js/2.16245fb0.chunk.js": "./static/js/2.16245fb0.chunk.js",
-    "static/js/2.16245fb0.chunk.js.map": "./static/js/2.16245fb0.chunk.js.map",
-    "static/js/3.af05479f.chunk.js": "./static/js/3.af05479f.chunk.js",
-    "static/js/3.af05479f.chunk.js.map": "./static/js/3.af05479f.chunk.js.map",
+    "main.css": "./static/css/main.fda97bd5.chunk.css",
+    "main.js": "./static/js/main.294a98b8.chunk.js",
+    "main.js.map": "./static/js/main.294a98b8.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.03c63fd0.js",
+    "runtime-main.js.map": "./static/js/runtime-main.03c63fd0.js.map",
+    "static/js/2.f1d3a3f1.chunk.js": "./static/js/2.f1d3a3f1.chunk.js",
+    "static/js/2.f1d3a3f1.chunk.js.map": "./static/js/2.f1d3a3f1.chunk.js.map",
+    "static/js/3.efcccbd3.chunk.js": "./static/js/3.efcccbd3.chunk.js",
+    "static/js/3.efcccbd3.chunk.js.map": "./static/js/3.efcccbd3.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.5b132b7a.chunk.css.map": "./static/css/main.5b132b7a.chunk.css.map",
-    "static/js/2.16245fb0.chunk.js.LICENSE.txt": "./static/js/2.16245fb0.chunk.js.LICENSE.txt",
+    "static/css/main.fda97bd5.chunk.css.map": "./static/css/main.fda97bd5.chunk.css.map",
+    "static/js/2.f1d3a3f1.chunk.js.LICENSE.txt": "./static/js/2.f1d3a3f1.chunk.js.LICENSE.txt",
+    "static/media/25.666e89b0.svg": "./static/media/25.666e89b0.svg",
     "static/media/_main.scss": "./static/media/twittersvg.5058ccda.svg",
     "static/media/awesome-1.e45427b8.svg": "./static/media/awesome-1.e45427b8.svg",
     "static/media/design.e0c9986d.svg": "./static/media/design.e0c9986d.svg",
-    "static/media/emyem.ce5e7793.png": "./static/media/emyem.ce5e7793.png",
     "static/media/keyboard.0a944739.svg": "./static/media/keyboard.0a944739.svg",
+    "static/media/logo-surrender.3b4f8163.png": "./static/media/logo-surrender.3b4f8163.png",
     "static/media/pin-dark-hair.619fb196.png": "./static/media/pin-dark-hair.619fb196.png",
     "static/media/pin-glasses.9f416fb8.png": "./static/media/pin-glasses.9f416fb8.png",
     "static/media/pin-lights.8900819d.png": "./static/media/pin-lights.8900819d.png",
@@ -25,9 +26,9 @@
     "static/media/share.224f4a5e.svg": "./static/media/share.224f4a5e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ae22cf7.js",
-    "static/js/2.16245fb0.chunk.js",
-    "static/css/main.5b132b7a.chunk.css",
-    "static/js/main.28a34496.chunk.js"
+    "static/js/runtime-main.03c63fd0.js",
+    "static/js/2.f1d3a3f1.chunk.js",
+    "static/css/main.fda97bd5.chunk.css",
+    "static/js/main.294a98b8.chunk.js"
   ]
 }
