@@ -62,7 +62,6 @@ const Share = (props) => {
         >
           Compartir en twitter
         </a>
-        )
       </section>
     </>
   );
