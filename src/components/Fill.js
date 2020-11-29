@@ -25,7 +25,11 @@ class Fill extends React.Component {
 
   render() {
     return (
-      <>
+      <form
+        className="customize-menu__form  js-section"
+        action=""
+        method="post"
+      >
         {this.renderInfo()}
         <p className="js__error-message-name js__hidden">Demasiado largo</p>
         <p className="js__error-message-job js__hidden">Demasiado largo</p>
@@ -33,7 +37,7 @@ class Fill extends React.Component {
           updateAvatar={this.props.updateAvatar}
           data={this.props.data.photo}
         />
-      </>
+      </form>
     );
   }
 }

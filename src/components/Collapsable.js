@@ -35,13 +35,8 @@ class Collapsable extends React.Component {
               className={`customize-form__container-btn js-arrow ${openArrow}`}
             ></button>
           </div>
-          <form
-            className={`customize-menu__form  js-section ${openClassName}`}
-            action=""
-            method="post"
-          >
-            {this.props.children}
-          </form>
+
+          <div className={`${openClassName}`}>{this.props.children}</div>
         </section>
       </>
     );
