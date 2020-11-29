@@ -631,3 +631,20 @@ body {
 .js-input {
   font-family: $fontFamily-title-secondary;
 }
+
+.loading__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &--image {
+    height: 20px;
+    width: auto;
+  }
+  &--text {
+    color: $color-background-medium-light;
+    font-family: $fontFamily-text;
+    font-size: 14px;
+    padding-bottom: 3px;
+  }
+}
